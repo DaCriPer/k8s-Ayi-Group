@@ -77,4 +77,17 @@ Un Ingress no expone puertos o protocolos arbitrarios. La exposición de servici
 
 ![image](https://github.com/DaCriPer/k8s-Ayi-Group/assets/49571488/69f3d19e-147f-4900-8ef1-dfb9078d95e1)
 
+## volume persistente
+
+```bash
+kubectl apply -f pv.yaml
+```
+
+```bash
+devuser@debian11-2:~/proyectoKube$ kubectl get pv -n proyecto-integrador
+NAME           CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM                                 STORAGECLASS   REASON   AGE
+volume-local   1Gi        RWO            Retain           Available   proyecto-integrador/storage-local-1   volume.local            18s
+devuser@debian11-2:~/proyectoKube$ 
+```
+
 ## Maria db
