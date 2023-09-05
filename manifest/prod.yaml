@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: produccion
+  labels:
+    ambiente: produccion
+    monitoreo: elk
+    soporte1: jenkins
+    soporte2: registry
+  annotations:
+    obs: Caaada despliegue debe aprobarse
+spec:
+  containers:
+  - name: prod
+    image: nginx

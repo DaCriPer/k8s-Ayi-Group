@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: testing
+  labels:
+    ambiente: testing
+    monitoreo: elk
+  annotations:
+    obs: Lo utilizan personas internas al proyecto
+spec:
+  containers:
+  - name: test
+    image: nginx
