@@ -39,6 +39,23 @@ Para habilitar el controlador  dns de entrada NGINX, ejecute el siguiente comand
 minikube addons enable ingress-dns
 ```
 
+### Actualizar el archivo host 
+
+#### Obtener la ip de minikube
+
+```bash
+minikube ip
+```
+
+#### Mapear el host de ingress con la ip de minikube
+
+- Para sistemas linux, dirijirse a _/etc/hosts_
+- Para sistemas window, dirijirse a _C:\Windows\System32\drivers\etc\hosts_
+
+```
+<ip_minikube> pi-k8s.ayi.group
+```
+
 ## Namespace
 
 ```bash
