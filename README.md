@@ -1,5 +1,4 @@
-# k8s-Ayi-Group
-Curso de capacitación
+# Sección 6: Pods
 
 1. Iniciar minikube 
 
