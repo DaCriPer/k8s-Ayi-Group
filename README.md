@@ -39,6 +39,12 @@ Para habilitar el controlador  dns de entrada NGINX, ejecute el siguiente comand
 minikube addons enable ingress-dns
 ```
 
+## Namespace
+
+```bash
+kubctl create namespace proyecto-integrador
+```
+
 ## Ingress controller
 
 ![image](https://github.com/DaCriPer/k8s-Ayi-Group/assets/49571488/f5137edf-ac7c-45fe-849c-a4c469021192)
