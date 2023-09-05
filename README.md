@@ -56,3 +56,8 @@ Un Ingress no expone puertos o protocolos arbitrarios. La exposición de servici
 
 ![image](https://github.com/DaCriPer/k8s-Ayi-Group/assets/49571488/22958526-8992-4e61-a391-f4d96436cf02)
 
+## Drupal
+
+![image](https://github.com/DaCriPer/k8s-Ayi-Group/assets/49571488/69f3d19e-147f-4900-8ef1-dfb9078d95e1)
+
+## Maria db
