@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mariadb-pvc
+  labels:
+    app: mariadb
+    type: pvc
+spec:  
+  storageClassName: ficheros.mariadb
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+       storage: 3Gi

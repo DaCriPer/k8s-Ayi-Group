@@ -1,0 +1,52 @@
+---
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: drupal
+  labels:
+    app: drupal
+    vol: "true"
+    typevol: pv
+spec:
+  selector:
+    matchLabels:
+      app: drupal
+      tier: frontend
+      typevol: pv
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: drupal
+        tier: frontend
+        typevol: pv
+    spec:
+      containers:
+        - name: drupal
+          image: drupal:latest
+          volumeMounts:
+            - mountPath: /opt/drupal/web/sites/default/setting.php
+              name: pv-storage
+      volumes:
+        - name: pv-storage
+          hostPath:
+            path: /home/devuser/Kube/Seccion8-9-10/dropal/conVolumen/ficherosDrupal/sites/setting.php
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-drupal
+  labels:
+    app: drupal
+    tier: frontend
+    vol: "true"
+    typevol: pv 
+spec:  
+  type: NodePort 
+  ports:
+  - port: 80
+  selector:
+    app: drupal
+    tier: frontend
+    typevol: pv
+  

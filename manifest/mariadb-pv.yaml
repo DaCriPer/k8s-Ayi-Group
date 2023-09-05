@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mariadb-pv
+  labels:
+    app: mariadb
+    type: local
+    vol: pv
+spec:  
+  storageClassName: ficheros.mariadb
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+     path: "/home/devuser/Kube/Seccion8-9-10/dropal/conVolumen/ficherosMariadb/"
