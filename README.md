@@ -90,4 +90,20 @@ volume-local   1Gi        RWO            Retain           Available   proyecto-i
 devuser@debian11-2:~/proyectoKube$ 
 ```
 
+## reclamado de volumen persistente
+
+```bash
+kubectl apply -f pvc.yaml
+```
+
+```bash
+devuser@debian11-2:~/proyectoKube$ kubectl get pv,pvc -n proyecto-integrador
+NAME                            CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                                 STORAGECLASS   REASON   AGE
+persistentvolume/volume-local   1Gi        RWO            Retain           Bound    proyecto-integrador/storage-local-1   volume.local            7m16s
+
+NAME                                    STATUS   VOLUME         CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+persistentvolumeclaim/storage-local-1   Bound    volume-local   1Gi        RWO            volume.local   6s
+devuser@debian11-2:~/proyectoKube$ 
+```
+
 ## Maria db
