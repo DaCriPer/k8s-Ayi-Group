@@ -1,4 +1,4 @@
-# Seccion 8, 9 y 10: Intración sin volumes
+# Seccion 8, 9 y 10: Instalación sin volumes
 Curso de capacitación
 
 ![image](https://github.com/DaCriPer/k8s-Ayi-Group/assets/49571488/9a9e960b-a55f-4d19-a61d-755eb8d44e75)
