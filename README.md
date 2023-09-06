@@ -30,13 +30,16 @@ Verifique que el controlador de entrada NGINX se esté ejecutando
 ```bash
 kubectl get pods -n ingress-nginx
 ```
-Nota: Puede pasar hasta un minuto antes de que vea que estos pods funcionan correctamente.
 
+**Nota:** Puede pasar hasta un minuto antes de que vea que estos pods funcionan correctamente.
 La salida es similar a:
+
+```bash
 NAME                                        READY   STATUS      RESTARTS    AGE
 ingress-nginx-admission-create-g9g49        0/1     Completed   0          11m
 ingress-nginx-admission-patch-rqp78         0/1     Completed   1          11m
 ingress-nginx-controller-59b45fb494-26npt   1/1     Running     0          11m
+```
 
 Para habilitar el controlador  dns de entrada NGINX, ejecute el siguiente comando:
 
