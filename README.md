@@ -14,13 +14,17 @@ El proyecto debe ser capaz de ser reactivo cuando se eliminen los pods levantand
 Al momento de navegar por la web de drupal, los datos almacenados deben aparecer sin importar cuál réplica de drupal haya recibido las peticiones.
 
 ## Requisitos previos
-Debe tener un controlador de Ingress para satisfacer un Ingress. Solo crear un recurso de Ingress no tiene efecto.Crear un clúster de minikube
-Si aún no ha configurado un clúster localmente, ejecute minikube start para crear un clúster.
+Debe tener un controlador de Ingress para satisfacer un Ingress. Solo crear un recurso de Ingress no tiene efecto.
+Ejecute _minikube start_ para crear un clúster.
 
 ### Habilitar el controlador de ingreso
 
-Para habilitar el controlador de entrada NGINX, ejecute el siguiente comando:
+Para habilitar el controlador de entrada NGINX, ejecute el siguiente comando
+
+```bash
 minikube addons enable ingress
+```
+
 Verifique que el controlador de entrada NGINX se esté ejecutando
 
 ```bash
