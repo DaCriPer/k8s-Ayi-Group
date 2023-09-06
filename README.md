@@ -111,6 +111,24 @@ devuser@debian11-2:~/proyectoKube$
 
 ![image](https://github.com/DaCriPer/k8s-Ayi-Group/assets/49571488/5ee0b117-29d0-479a-9f71-585e6c4796cb)
 
+```bash
+devuser@debian11-2:~/proyectoKube$ kubectl get all -n proyecto-integrador
+NAME                          READY   STATUS    RESTARTS   AGE
+pod/drupal-56d68d8c9d-2mtrk   1/1     Running   0          14m
+pod/drupal-56d68d8c9d-phjkr   1/1     Running   0          14m
+pod/mariadb-vol               1/1     Running   0          14m
+
+NAME                     TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
+service/drupal-service   NodePort    10.102.255.171   <none>        80:32674/TCP   14m
+service/mariadb-vol      ClusterIP   10.104.246.35    <none>        3306/TCP       14m
+
+NAME                     READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/drupal   2/2     2            2           14m
+
+NAME                                DESIRED   CURRENT   READY   AGE
+replicaset.apps/drupal-56d68d8c9d   2         2         2       14m
+devuser@debian11-2:~/proyectoKube$
+```
 ## Inconvenientes no resueltos
 
 ![image](https://github.com/DaCriPer/k8s-Ayi-Group/assets/49571488/a971ddc8-5394-42e6-a8e0-137aedafecc0)
