@@ -1,7 +1,8 @@
 # Proyecto integrador
 Curso de capacitación
 
-![image](https://github.com/DaCriPer/k8s-Ayi-Group/assets/49571488/8bc4fbbc-11eb-408e-b629-c395d1212083)
+      ![image](https://github.com/DaCriPer/k8s-Ayi-Group/assets/49571488/48293220-6a69-470f-bd73-989a728c9483)
+
 
 ## Requerimientos
 
@@ -108,11 +109,14 @@ devuser@debian11-2:~/proyectoKube$
 
 ## Maria db
 
+![image](https://github.com/DaCriPer/k8s-Ayi-Group/assets/49571488/5ee0b117-29d0-479a-9f71-585e6c4796cb)
+
 ## Inconvenientes no resueltos
+
+![image](https://github.com/DaCriPer/k8s-Ayi-Group/assets/49571488/a971ddc8-5394-42e6-a8e0-137aedafecc0)
 
 Al momento de configurar drupal en la web con mariadb, se obtiene error de parte de mariadb.
 Los logs de mariadb mencionan
 ```
 borted connection 5 to db: 'unconnected' user: 'unauthenticated' host: '10.244.0.234
 ```
-Aun no se logró resolver
