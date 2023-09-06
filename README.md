@@ -1,7 +1,7 @@
 # Proyecto integrador
 Curso de capacitación
 
-      ![image](https://github.com/DaCriPer/k8s-Ayi-Group/assets/49571488/48293220-6a69-470f-bd73-989a728c9483)
+![image](https://github.com/DaCriPer/k8s-Ayi-Group/assets/49571488/48293220-6a69-470f-bd73-989a728c9483)
 
 
 ## Requerimientos
