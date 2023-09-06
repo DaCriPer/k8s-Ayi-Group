@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-nginx
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  labels:
+    app: drupal
+    component: nginx
+    role: ingress
+  namespace: proyecto-integrador
+spec:
+  rules:
+    - host: pi-k8s.ayi.group
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: drupal-service
+              port:
+                number: 80

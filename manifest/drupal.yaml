@@ -1,0 +1,43 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: drupal-service
+  labels:
+    app: drupal
+    tier: frontend
+    vol: mariadb
+  namespace: proyecto-integrador
+spec:
+  type: NodePort
+  ports:
+  - port: 80 # puerto expuerto internamente
+  selector:
+    app: drupal
+    tier: frontend
+    vol: mariadb
+---
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: drupal
+  labels:
+    app: drupal
+  namespace: proyecto-integrador
+spec:
+  selector:
+    matchLabels:
+      app: drupal
+      tier: frontend
+      vol: mariadb
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: drupal
+        tier: frontend
+        vol: mariadb
+    spec:
+      containers:
+        - name: drupal
+          image: drupal:8.6
