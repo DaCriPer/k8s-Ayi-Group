@@ -107,3 +107,12 @@ devuser@debian11-2:~/proyectoKube$
 ```
 
 ## Maria db
+
+## Inconvenientes no resueltos
+
+Al momento de configurar drupal en la web con mariadb, se obtiene error de parte de mariadb.
+Los logs de mariadb mencionan
+```
+borted connection 5 to db: 'unconnected' user: 'unauthenticated' host: '10.244.0.234
+```
+Aun no se logró resolver
